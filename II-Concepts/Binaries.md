@@ -100,7 +100,7 @@ The advantage of using binary classes instead of running raw commands is that th
 
 ## Creating your own binaries
 
-Creating your own binaries is fairly straight-forward. At their core they're simply classes extending `Rocketeer\Abstracts\AbstractBinary`. There is no required method at all, they're just canvas to add your own aliases and/or known paths.
+Creating your own binaries is fairly straight-forward. At their core they're simply classes extending `Rocketeer\Abstracts\AbstractBinary`. Since all php files in the .rocketeer folder are automatically included, custom binary classes can be put in their own php file, named binaries.php for example. There is no required method at all, they're just canvas to add your own aliases and/or known paths.
 
 To set the predefined known paths of a binary, simply override the `getKnownPaths` method. It returns an array with two entries: first entry is what to call `which` on, and if that doesn't work, it'll use the second path. In other words, the second entry of the array is a fallback path.
 
